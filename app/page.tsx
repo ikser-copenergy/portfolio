@@ -16,7 +16,8 @@ import {
   Database,
   Cloud,
   Layout,
-  ChevronRight
+  ChevronRight,
+  ExternalLink,
 } from "lucide-react";
 import { useLocale } from "@/components/LocaleProvider";
 
@@ -230,12 +231,15 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-light tracking-tight text-white mb-6">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-light tracking-tight text-white mb-4">
               Ikser Marquez <span className="text-emerald-500/50">|</span> <br className="hidden md:block" />
               <span className="font-medium bg-clip-text text-transparent bg-gradient-to-r from-white to-zinc-500">
                 {t("hero.role")}
               </span>
             </h1>
+            <p className="text-base md:text-lg text-zinc-500 mb-6 font-light tracking-wide max-w-3xl">
+              {t("hero.experience")}
+            </p>
             <p className="text-lg md:text-xl text-zinc-400 max-w-3xl leading-relaxed font-light">
               {t("hero.subtitle")}
             </p>
@@ -263,69 +267,109 @@ export default function Home() {
             viewport={{ once: true, margin: "-100px" }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
           >
-            {/* Human Resources Engine */}
+            {/* Human resources system */}
             <motion.div variants={itemVariants} className="col-span-1 relative group">
               <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl" />
-              <div className="h-full border border-white/5 bg-[#0a0a0a]/80 backdrop-blur-sm p-8 rounded-xl hover:border-emerald-500/30 transition-colors duration-500 flex flex-col justify-between relative z-10">
-                <div>
-                  <div className="mb-6 inline-flex p-3 rounded-lg border border-emerald-500/20 bg-emerald-500/5 text-emerald-400 group-hover:scale-110 transition-transform duration-500">
-                    <Cpu className="w-6 h-6" strokeWidth={1.5} />
+              <a
+                href="http://planillero.arrayanhn.com:3003/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative z-10 block h-full rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-[#050505]"
+              >
+                <div className="h-full border border-white/5 bg-[#0a0a0a]/80 backdrop-blur-sm p-8 rounded-xl hover:border-emerald-500/30 transition-colors duration-500 flex flex-col gap-6">
+                  <div className="flex-1 min-h-0">
+                    <div className="mb-6 inline-flex p-3 rounded-lg border border-emerald-500/20 bg-emerald-500/5 text-emerald-400 group-hover:scale-110 transition-transform duration-500">
+                      <Cpu className="w-6 h-6" strokeWidth={1.5} />
+                    </div>
+                    <h4 className="text-xl font-medium mb-3 flex items-center gap-2">
+                      {t("project.hre.title")}
+                      <ChevronRight className="w-4 h-4 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300 text-emerald-500" />
+                    </h4>
+                    <p className="text-zinc-400 text-sm leading-relaxed">
+                      {t("project.hre.body")}
+                    </p>
                   </div>
-                  <h4 className="text-xl font-medium mb-3 flex items-center gap-2">
-                    {t("project.hre.title")}
-                    <ChevronRight className="w-4 h-4 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300 text-emerald-500" />
-                  </h4>
-                  <p className="text-zinc-400 text-sm leading-relaxed mb-6">
-                    {t("project.hre.body")}
-                  </p>
+                  <div>
+                    <div className="text-xs font-medium text-zinc-500 uppercase tracking-wider mb-3">
+                      {t("project.hre.tag")}
+                    </div>
+                    <div className="flex items-center gap-2 border-t border-white/10 pt-3 text-xs font-medium text-emerald-400/90 group-hover:text-emerald-300">
+                      <ExternalLink className="w-3.5 h-3.5 shrink-0" strokeWidth={1.5} aria-hidden />
+                      <span>{t("project.link.visit")}</span>
+                    </div>
+                  </div>
                 </div>
-                <div className="text-xs font-medium text-zinc-500 uppercase tracking-wider">
-                  {t("project.hre.tag")}
-                </div>
-              </div>
+              </a>
             </motion.div>
 
             {/* Enterprise POS */}
             <motion.div variants={itemVariants} className="col-span-1 relative group">
               <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl" />
-              <div className="h-full border border-white/5 bg-[#0a0a0a]/80 backdrop-blur-sm p-8 rounded-xl hover:border-orange-500/30 transition-colors duration-500 flex flex-col justify-between relative z-10">
-                <div>
-                  <div className="mb-6 inline-flex p-3 rounded-lg border border-orange-500/20 bg-orange-500/5 text-orange-400 group-hover:scale-110 transition-transform duration-500">
-                    <Store className="w-6 h-6" strokeWidth={1.5} />
+              <a
+                href="https://www.vendoyaa.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative z-10 block h-full rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-[#050505]"
+              >
+                <div className="h-full border border-white/5 bg-[#0a0a0a]/80 backdrop-blur-sm p-8 rounded-xl hover:border-orange-500/30 transition-colors duration-500 flex flex-col gap-6">
+                  <div className="flex-1 min-h-0">
+                    <div className="mb-6 inline-flex p-3 rounded-lg border border-orange-500/20 bg-orange-500/5 text-orange-400 group-hover:scale-110 transition-transform duration-500">
+                      <Store className="w-6 h-6" strokeWidth={1.5} />
+                    </div>
+                    <h4 className="text-xl font-medium mb-3 flex items-center gap-2">
+                      {t("project.pos.title")}
+                      <ChevronRight className="w-4 h-4 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300 text-orange-500" />
+                    </h4>
+                    <p className="text-zinc-400 text-sm leading-relaxed">
+                      {t("project.pos.body")}
+                    </p>
                   </div>
-                  <h4 className="text-xl font-medium mb-3 flex items-center gap-2">
-                    {t("project.pos.title")}
-                    <ChevronRight className="w-4 h-4 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300 text-orange-500" />
-                  </h4>
-                  <p className="text-zinc-400 text-sm leading-relaxed mb-6">
-                    {t("project.pos.body")}
-                  </p>
+                  <div>
+                    <div className="text-xs font-medium text-zinc-500 uppercase tracking-wider mb-3">
+                      {t("project.pos.tag")}
+                    </div>
+                    <div className="flex items-center gap-2 border-t border-white/10 pt-3 text-xs font-medium text-orange-400/90 group-hover:text-orange-300">
+                      <ExternalLink className="w-3.5 h-3.5 shrink-0" strokeWidth={1.5} aria-hidden />
+                      <span>{t("project.link.visit")}</span>
+                    </div>
+                  </div>
                 </div>
-                <div className="text-xs font-medium text-zinc-500 uppercase tracking-wider">
-                  {t("project.pos.tag")}
-                </div>
-              </div>
+              </a>
             </motion.div>
 
             {/* Fleet Management System */}
             <motion.div variants={itemVariants} className="col-span-1 relative group">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl" />
-              <div className="h-full border border-white/5 bg-[#0a0a0a]/80 backdrop-blur-sm p-8 rounded-xl hover:border-blue-500/30 transition-colors duration-500 flex flex-col justify-between relative z-10">
-                <div>
-                  <div className="mb-6 inline-flex p-3 rounded-lg border border-blue-500/20 bg-blue-500/5 text-blue-400 group-hover:scale-110 transition-transform duration-500">
-                    <Truck className="w-6 h-6" strokeWidth={1.5} />
+              <a
+                href="http://logistica.arrayanhn.com:3005"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative z-10 block h-full rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/40 focus-visible:ring-offset-2 focus-visible:ring-offset-[#050505]"
+              >
+                <div className="h-full border border-white/5 bg-[#0a0a0a]/80 backdrop-blur-sm p-8 rounded-xl hover:border-blue-500/30 transition-colors duration-500 flex flex-col gap-6">
+                  <div className="flex-1 min-h-0">
+                    <div className="mb-6 inline-flex p-3 rounded-lg border border-blue-500/20 bg-blue-500/5 text-blue-400 group-hover:scale-110 transition-transform duration-500">
+                      <Truck className="w-6 h-6" strokeWidth={1.5} />
+                    </div>
+                    <h4 className="text-xl font-medium mb-3 flex items-center gap-2">
+                      {t("project.fleet.title")}
+                      <ChevronRight className="w-4 h-4 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300 text-blue-400" />
+                    </h4>
+                    <p className="text-zinc-400 text-sm leading-relaxed">
+                      {t("project.fleet.body")}
+                    </p>
                   </div>
-                  <h4 className="text-xl font-medium mb-3 flex items-center gap-2">
-                    {t("project.fleet.title")}
-                  </h4>
-                  <p className="text-zinc-400 text-sm leading-relaxed mb-6">
-                    {t("project.fleet.body")}
-                  </p>
+                  <div>
+                    <div className="text-xs font-medium text-zinc-500 uppercase tracking-wider mb-3">
+                      {t("project.fleet.tag")}
+                    </div>
+                    <div className="flex items-center gap-2 border-t border-white/10 pt-3 text-xs font-medium text-sky-400/90 group-hover:text-sky-300">
+                      <ExternalLink className="w-3.5 h-3.5 shrink-0" strokeWidth={1.5} aria-hidden />
+                      <span>{t("project.link.visit")}</span>
+                    </div>
+                  </div>
                 </div>
-                <div className="text-xs font-medium text-zinc-500 uppercase tracking-wider">
-                  {t("project.fleet.tag")}
-                </div>
-              </div>
+              </a>
             </motion.div>
 
             {/* Industrial IoT & Energy */}
@@ -489,13 +533,13 @@ export default function Home() {
             className="flex items-center gap-6"
           >
             <a 
-              href="mailto:contact@ikser.dev" 
+              href="mailto:iksermd@gmail.com" 
               className="group flex items-center gap-2 text-sm text-zinc-400 hover:text-white transition-colors duration-300"
             >
               <div className="p-2 rounded-md bg-white/5 group-hover:bg-emerald-500/20 group-hover:text-emerald-400 transition-colors">
                 <Mail className="w-4 h-4" strokeWidth={1.5} />
               </div>
-              contact@ikser.dev
+              iksermd@gmail.com
             </a>
             <a 
               href="https://github.com/ikser-copenergy" 

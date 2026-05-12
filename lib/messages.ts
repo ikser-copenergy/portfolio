@@ -7,6 +7,7 @@ export type MessageKey =
   | "nav.contact"
   | "nav.langAria"
   | "hero.role"
+  | "hero.experience"
   | "hero.subtitle"
   | "portfolio.kicker"
   | "portfolio.title"
@@ -28,6 +29,7 @@ export type MessageKey =
   | "project.pos.title"
   | "project.pos.body"
   | "project.pos.tag"
+  | "project.link.visit"
   | "stack.kicker"
   | "stack.title"
   | "stack.frontend"
@@ -42,24 +44,25 @@ export type MessageKey =
 export const messages: Record<Locale, Record<MessageKey, string>> = {
   en: {
     "meta.description":
-      "High-performance software architectures for industrial automation and enterprise ecosystems.",
+      "I develop intuitive, scalable solutions from design through implementation—software that makes daily operations easier to run and automation more dependable, grounded in consistent best practices.",
     "nav.projects": "Projects",
     "nav.stack": "Stack",
     "nav.contact": "Contact",
     "nav.langAria": "Language",
-    "hero.role": "Senior Full Stack Engineer",
+    "hero.role": "Full Stack Engineer",
+    "hero.experience": "More than 4 years of experience",
     "hero.subtitle":
-      "High-performance software architectures for industrial automation and enterprise ecosystems.",
-    "portfolio.kicker": "The Work",
-    "portfolio.title": "Featured Solutions",
-    "project.hre.title": "Human Resources Engine",
+      "I develop intuitive, scalable solutions from design through implementation—software that makes daily operations easier to run and automation more dependable, grounded in consistent best practices.",
+    "portfolio.kicker": "Portfolio",
+    "portfolio.title": "Selected projects",
+    "project.hre.title": "Human resources system",
     "project.hre.body":
-      "Reduced processing time from 10 days to 24 hours monthly (90% optimization) for 150+ employees.",
-    "project.hre.tag": "Operational Efficiency",
+      "Modular HR: task tracking, payroll automation, personnel, and accounting handoff. Multi-company billing ties logged activities to project labor charges. Administrative processing time cut by ~90%.",
+    "project.hre.tag": "HR · Payroll · Accounting",
     "project.fleet.title": "Fleet Management",
     "project.fleet.body":
-      "Real-time telemetry, fuel consumption analytics, and maintenance API integration.",
-    "project.fleet.tag": "Logistics & Telemetry",
+      "Manually logged operations (no automated route capture yet): vehicle usage control, fuel consumption, performance metrics, and integration with a maintenance app.",
+    "project.fleet.tag": "Fleet · Fuel · Maintenance",
     "project.iot.title": "Industrial IoT & Energy",
     "project.iot.body":
       "Real-time sensor monitoring and electrical equipment automation for the power production industry.",
@@ -72,12 +75,13 @@ export const messages: Record<Locale, Record<MessageKey, string>> = {
     "project.meteo.body":
       "Automated reporting systems for power grid stability based on weather station data.",
     "project.meteo.tag": "Data Processing",
-    "project.pos.title": "Enterprise POS Suite",
+    "project.pos.title": "POS for small businesses",
     "project.pos.body":
-      "Multitenant point-of-sale: isolated organizations, multi-branch hierarchy per tenant, concurrent multi-user access with granular roles (RBAC), and reporting for sales velocity, SKU mix, cashier performance, and branch-level KPIs—export-ready for accounting and audits.",
-    "project.pos.tag": "Retail · Omnichannel commerce",
-    "stack.kicker": "Expertise",
-    "stack.title": "Technical Rigor",
+      "Point-of-sale for small businesses: multitenant and multi-branch support, inventory, taxes, sales generation, and reporting—without enterprise-suite complexity.",
+    "project.pos.tag": "Retail · SMB",
+    "project.link.visit": "Open application",
+    "stack.kicker": "Technologies",
+    "stack.title": "Stack & tooling",
     "stack.frontend": "Frontend",
     "stack.backend": "Backend",
     "stack.databases": "Databases",
@@ -85,28 +89,30 @@ export const messages: Record<Locale, Record<MessageKey, string>> = {
     "stack.microservices": "Microservices",
     "stack.cicd": "CI/CD pipelines",
     "footer.cta": "Ready to optimize your systems?",
-    "footer.timezone": "Based in GMT-6. Synchronized with US teams.",
+    "footer.timezone":
+      "Based in GMT-6. Synchronized with US and LATAM teams.",
   },
   es: {
     "meta.description":
-      "Arquitecturas de software de alto rendimiento para automatización industrial y ecosistemas empresariales.",
+      "Desarrollo soluciones intuitivas y escalables, desde el diseño hasta la implementación: software que facilita procesos diarios y automatizaciones fiables, con buenas prácticas en cada etapa.",
     "nav.projects": "Proyectos",
     "nav.stack": "Stack",
     "nav.contact": "Contacto",
     "nav.langAria": "Idioma",
-    "hero.role": "Ingeniero Full Stack Senior",
+    "hero.role": "Ingeniero Full Stack",
+    "hero.experience": "Más de 4 años de experiencia",
     "hero.subtitle":
-      "Arquitecturas de software de alto rendimiento para automatización industrial y ecosistemas empresariales.",
-    "portfolio.kicker": "El trabajo",
-    "portfolio.title": "Soluciones destacadas",
-    "project.hre.title": "Motor de Recursos Humanos",
+      "Desarrollo soluciones intuitivas y escalables, desde el diseño hasta la implementación: software que facilita procesos diarios y automatizaciones fiables, con buenas prácticas en cada etapa.",
+    "portfolio.kicker": "Portafolio",
+    "portfolio.title": "Proyectos destacados",
+    "project.hre.title": "Sistema de recursos humanos",
     "project.hre.body":
-      "Reducción del tiempo de procesamiento de 10 días a 24 horas al mes (90% de optimización) para más de 150 empleados.",
-    "project.hre.tag": "Eficiencia operativa",
+      "RRHH modular: tareas, planilla automática, personal y procesos contables. Multiempresa: cobro de mano de obra por proyecto según actividades ingresadas. ~90% menos tiempo en procesos administrativos.",
+    "project.hre.tag": "RRHH · Planilla · Contabilidad",
     "project.fleet.title": "Gestión de flotas",
     "project.fleet.body":
-      "Telemetría en tiempo real, analítica de consumo de combustible e integración con API de mantenimiento.",
-    "project.fleet.tag": "Logística y telemetría",
+      "Datos ingresados manualmente (aún sin automatización de recorridos): control de uso de vehículos, consumos de combustible, rendimiento e integración con app de mantenimientos.",
+    "project.fleet.tag": "Flotas · Combustible · Mantenimiento",
     "project.iot.title": "IoT industrial y energía",
     "project.iot.body":
       "Monitoreo de sensores en tiempo real y automatización de equipos eléctricos para la industria de generación eléctrica.",
@@ -119,12 +125,13 @@ export const messages: Record<Locale, Record<MessageKey, string>> = {
     "project.meteo.body":
       "Sistemas de reportes automatizados para la estabilidad de la red eléctrica a partir de datos de estaciones meteorológicas.",
     "project.meteo.tag": "Procesamiento de datos",
-    "project.pos.title": "Suite POS empresarial",
+    "project.pos.title": "POS para pequeños negocios",
     "project.pos.body":
-      "Punto de venta multitenant: organizaciones aisladas, jerarquía multisucursal por tenant, acceso multiusuario concurrente con roles granulares (RBAC) y reportes de velocidad de ventas, mix de SKU, desempeño por cajero y KPIs por sucursal—listos para exportar a contabilidad y auditorías.",
-    "project.pos.tag": "Retail · Comercio omnicanal",
-    "stack.kicker": "Experiencia",
-    "stack.title": "Rigor técnico",
+      "Punto de venta pensado para comercios pequeños: soporte multitenant y multisucursal, inventario, impuestos, generación de ventas y reportes—sin la complejidad de una suite empresarial.",
+    "project.pos.tag": "Retail · Pymes",
+    "project.link.visit": "Abrir aplicación",
+    "stack.kicker": "Tecnologías",
+    "stack.title": "Stack y herramientas",
     "stack.frontend": "Frontend",
     "stack.backend": "Backend",
     "stack.databases": "Bases de datos",
@@ -133,15 +140,9 @@ export const messages: Record<Locale, Record<MessageKey, string>> = {
     "stack.cicd": "Pipelines CI/CD",
     "footer.cta": "¿Listo para optimizar tus sistemas?",
     "footer.timezone":
-      "Ubicación GMT-6. Sincronizado con equipos en EE. UU.",
+      "Ubicación GMT-6. Sincronizado con equipos de EE. UU. y LATAM.",
   },
 };
 
+/** Same name as cookie set by `middleware.ts` (LOCALE_COOKIE). */
 export const STORAGE_KEY = "ikser.locale";
-
-export function normalizeLocale(raw: string | undefined): Locale {
-  if (!raw) return "en";
-  const lower = raw.toLowerCase();
-  if (lower.startsWith("es")) return "es";
-  return "en";
-}
